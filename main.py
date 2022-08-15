@@ -1,28 +1,38 @@
 import keyboard
-# cv2.cvtColor takes a numpy ndarray as an argument
 import numpy as nm  
 import pytesseract
-# importing OpenCV
 import cv2  
 from PIL import ImageGrab
 import time   
-# Path of tesseract executable
 pytesseract.pytesseract.tesseract_cmd =r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
-while(True):
-     # ImageGrab-To capture the screen image in a loop. 
-    # Bbox used to capture a specific area.
-    cap = ImageGrab.grab(bbox =(370, 915, 1000, 940))
-    time.sleep(5)
-    # Converted the image to monochrome for it to be easily 
-        # read by the OCR and obtained the output String.
+#coodinate of avatar pixel
+x=340
+y=913
+#RGB value of pixel
+red=234
+green=141
+blue=150
+#coodinate for bbox
+x1=370
+y1=913
+x2=1000
+y2=940
+
+while True :
+    #avatar loop
+    time.sleep(1)
+    im = ImageGrab.grab(bbox=(x, y, x+1, y+1))
+    rgbim = im.convert('RGB')
+    r,g,b = rgbim.getpixel((0,0))
+    if(r,g,b) == (red, green, blue):
+        continue
+    cap = ImageGrab.grab(bbox =(x1, y1, x2, y2))
     tesstr = pytesseract.image_to_string(
             cv2.cvtColor(nm.array(cap), cv2.COLOR_BGR2GRAY), 
-                lang ='eng')
-    print(tesstr)
+            config="-c tessedit_char_whitelist=0123456789")
     num = int(tesstr)
     numtype = num + 1
+    #write number
     keyboard.write(str(numtype))
     keyboard.press_and_release('enter')
-
-
