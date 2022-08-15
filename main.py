@@ -31,6 +31,8 @@ while True :
     tesstr = pytesseract.image_to_string(
             cv2.cvtColor(nm.array(cap), cv2.COLOR_BGR2GRAY), 
             config="-c tessedit_char_whitelist=0123456789")
+    if(tesstr) == "":
+        continue
     num = int(tesstr)
     numtype = num + 1
     #write number
