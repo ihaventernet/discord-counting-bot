@@ -35,11 +35,11 @@ for example:
 
 this is a discord chat on your screen
 
-![this is a discord chat on your screen](https://raw.githubusercontent.com/ihaventernet/discord-number-bot/main/image1.png?token=GHSAT0AAAAAABXU2FAKDC37AUVENKCYJH22YX3DASA)
+![](https://raw.githubusercontent.com/ihaventernet/discord-number-bot/main/image1.png?token=GHSAT0AAAAAABXU2FAKDC37AUVENKCYJH22YX3DASA)
 
-the screenshot of screen.py should look like this
+screenshot of screen.py should looks like this, it only shows the numbers
 
-![the screenshot of screen.py should look like this](https://raw.githubusercontent.com/ihaventernet/discord-number-bot/main/image2.png?token=GHSAT0AAAAAABXU2FAKLQZP4MNVVPR5ODE6YX3DAXA)
+![](https://raw.githubusercontent.com/ihaventernet/discord-number-bot/main/image2.png?token=GHSAT0AAAAAABXU2FAKLQZP4MNVVPR5ODE6YX3DAXA)
 
 put the new x & y into main.py
 
