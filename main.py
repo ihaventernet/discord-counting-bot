@@ -20,7 +20,6 @@ x2=1000
 y2=940
 
 while True :
-    #avatar loop
     time.sleep(2)
     im = ImageGrab.grab(bbox=(x, y, x+1, y+1))
     rgbim = im.convert('RGB')
