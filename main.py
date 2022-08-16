@@ -6,14 +6,11 @@ from PIL import ImageGrab
 import time   
 pytesseract.pytesseract.tesseract_cmd =r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
-#coodinate of avatar pixel
-x=340
-y=913
-#RGB value of pixel
+#put rgb value of avatar pixel here
 red=234
 green=141
 blue=150
-#coodinate for bbox
+#put x&y coodinate here
 x1=370
 y1=913
 x2=1000
@@ -21,7 +18,7 @@ y2=940
 
 while True :
     time.sleep(2)
-    im = ImageGrab.grab(bbox=(x, y, x+1, y+1))
+    im = ImageGrab.grab(bbox=(x1-30, y1, x1-29, y1+1))
     rgbim = im.convert('RGB')
     r,g,b = rgbim.getpixel((0,0))
     if(r,g,b) == (red, green, blue):
