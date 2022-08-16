@@ -17,7 +17,8 @@ x2=1000
 y2=940
 
 while True :
-    time.sleep(2)
+    #delay added because of timestop lol
+    time.sleep(8)
     im = ImageGrab.grab(bbox=(x1-30, y1, x1-29, y1+1))
     rgbim = im.convert('RGB')
     r,g,b = rgbim.getpixel((0,0))
