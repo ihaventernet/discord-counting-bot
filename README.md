@@ -44,3 +44,5 @@ screenshot of screen.py should looks like this, it only shows the numbers
 put the new x & y into main.py
 
 also put the new rgb value into main.py
+
+run main.py
