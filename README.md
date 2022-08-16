@@ -26,3 +26,10 @@ tesseract (https://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-w64-setup-v5
   
   pip install opencv-python
 ```
+## usage
+the counting bot works by taking a screenshot of your screen, read the numbers & type the next number
+use screen.py to calibrate input image
+for example:
+[this is a discord chat on your screen](https://github.com/ihaventernet/discord-number-bot/blob/main/image1.png)
+[the screenshot of screen.py should look like this](https://github.com/ihaventernet/discord-number-bot/blob/main/image2.png)
+put the new x & y into main.py
