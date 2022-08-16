@@ -46,3 +46,5 @@ put the new x & y into main.py
 also put the new rgb value into main.py
 
 run main.py
+
+ps: u should press on the message box after u run the code so it can type
