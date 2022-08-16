@@ -21,20 +21,32 @@ y2=940
 
 while True :
     #avatar loop
-    time.sleep(1)
+    time.sleep(2)
     im = ImageGrab.grab(bbox=(x, y, x+1, y+1))
     rgbim = im.convert('RGB')
     r,g,b = rgbim.getpixel((0,0))
     if(r,g,b) == (red, green, blue):
         continue
     cap = ImageGrab.grab(bbox =(x1, y1, x2, y2))
-    tesstr = pytesseract.image_to_string(
-            cv2.cvtColor(nm.array(cap), cv2.COLOR_BGR2GRAY), 
-            config="-c tessedit_char_whitelist=0123456789")
+    gry = cv2.cvtColor(nm.array(cap), cv2.COLOR_BGR2GRAY)
+    inverted_image = cv2.bitwise_not(gry)
+    tesstr = pytesseract.image_to_string(inverted_image,
+            config="-c tessedit_char_whitelist=0123456789, --psm 7")
     if(tesstr) == "":
         continue
     num = int(tesstr)
+    if num == 1:
+        numtype = num + 11
+        keyboard.write(str(numtype))
+        keyboard.press_and_release('enter')
+        continue
     numtype = num + 1
-    #write number
     keyboard.write(str(numtype))
     keyboard.press_and_release('enter')
+    if numtype % 10 == 1:
+        time.sleep(2)
+        numtype = num + 2
+        keyboard.write(str(numtype))
+        keyboard.press_and_release('enter')
+
+    
