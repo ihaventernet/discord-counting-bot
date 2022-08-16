@@ -26,7 +26,7 @@ tesseract (https://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-w64-setup-v5
   
   pip install opencv-python
 ```
-## usage
+## how to use
 the counting bot works by taking a screenshot of your screen, read the numbers & type the next number
 
 use screen.py to calibrate input image
@@ -44,3 +44,7 @@ screenshot of screen.py should looks like this, it only shows the numbers
 put the new x & y into main.py
 
 also put the new rgb value into main.py
+
+run main.py
+
+ps: u should press on the message box after u run the code so it can type
