@@ -33,8 +33,14 @@ use screen.py to calibrate input image
 
 for example:
 
-[this is a discord chat on your screen](ihaventernet.github.com/repository/discord-number-bot/image1.png)
+this is a discord chat on your screen
 
-[the screenshot of screen.py should look like this](ihaventernet.github.com/repository/discord-number-bot/image2.png)
+![this is a discord chat on your screen](https://raw.githubusercontent.com/ihaventernet/discord-number-bot/main/image1.png?token=GHSAT0AAAAAABXU2FAKDC37AUVENKCYJH22YX3DASA)
+
+the screenshot of screen.py should look like this
+
+![the screenshot of screen.py should look like this](https://raw.githubusercontent.com/ihaventernet/discord-number-bot/main/image2.png?token=GHSAT0AAAAAABXU2FAKLQZP4MNVVPR5ODE6YX3DAXA)
 
 put the new x & y into main.py
+
+also put the new rgb value into main.py
