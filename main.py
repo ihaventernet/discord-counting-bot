@@ -18,7 +18,7 @@ y2=940
 
 while True :
     #delay added because of timestop lol
-    time.sleep(2)
+    time.sleep(6)
     im = ImageGrab.grab(bbox=(x1-30, y1, x1-29, y1+1))
     rgbim = im.convert('RGB')
     r,g,b = rgbim.getpixel((0,0))
@@ -43,7 +43,7 @@ while True :
     if numtype % 100 == 11:
         if(r,g,b) == (red, green, blue):
             continue
-        time.sleep(2)
+        time.sleep(6)
         numtype = num + 3
         keyboard.write(str(numtype))
         keyboard.press_and_release('enter')
